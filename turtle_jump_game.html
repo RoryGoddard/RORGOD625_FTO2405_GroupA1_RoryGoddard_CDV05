@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DevRory Portfolio Website</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  
+        
+        <!-- Update these with your own fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="img/devrory.png" alt="">
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="index.html#services" class="nav__link">My Services</a></li>
+                    <li class="nav__item"><a href="index.html#about" class="nav__link">About me</a></li>
+                    <li class="nav__item"><a href="index.html#work" class="nav__link">My Work</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+
+        <section class="intro">
+            <h1 class="section__title section__title--intro">
+                <strong>Turtle Jump Game</strong>
+            </h1>
+            <p class="section__subtitle section__subtitle--intro">Help the turtle cross the road!</p>
+            <img src="img/turtle_jump_game_cropped.png" alt="A Screengrab of the turtle jump game where a turtle has to cross a busy road ahead" class="intro__img">
+        </section>
+        
+        <div class="portfolio-item-individual">
+            <p>Help our friend the turtle cross the road and dodge the cars!</p>
+
+            <img src="img/turtle_jump_game_highres.png" alt="Higher resolution image of the turtle about to cross the road">
+
+            <p>Although the looks are humble this game was fun to design. I'll talk about the turtle first. He is from the turtle graphics module in Python, he is an object defined by our turtle class, with certain attributes that spawn him into the world facing forward at the bottom of the screen, ready to cross the road.</p>
+            <p>Controlled by the up key, when pressed, the turtle will advance ahead, and the player can increase the level if they reach the top of the screen. Programmaticly, this is when the turtle reaches a certain Y axis value. Upon reaching the value, the turtle respawns at the bottom of the page, and the cars get faster and more plentiful, and the player is notified the level has increased, and the while loop of the game continues.</p>
+
+            <video autoplay muted controls>
+                <source src="/img/turtle_jump_game.webm" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+
+            <p>The cars are managed by their own CarManager.py where they are saved in a list, spawning at different Y values, and travelling at a speed determined by the level the player is on. When our turtles y value and x value are within a small range of a cars x and y value, our collisionmanager.py will detect the collision and signal that the game is over by declaring gameIsOn=False and triguring the while loop to end.</p>
+            <p>This looks like a simple game but it did teach me a lot about Object Oriented Programming, as everything was achieved using objects created from classes.</p>
+        </div>
+        
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <!-- replace with your own email address -->
+            <a href="mailto:goddardrory@gmail.com" class="footer__link">goddardrory@gmail.com</a>
+            <ul class="social-list">
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://www.linkedin.com/in/rory-goddard-895303298/">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://github.com/RoryGoddard">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+        
+        
+        <script src="js/index.js"></script>
+        
+    </body>
+</html>
